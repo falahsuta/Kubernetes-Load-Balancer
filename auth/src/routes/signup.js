@@ -25,13 +25,23 @@ router.post(
       throw new ValidationError(errors.array());
     }
 
-    const { username, password } = req.body;
+    const { username, password, role } = req.body;
+
+    const serverApiKey = "test"; // or use .env variable 
+
+    if (role === 1) {
+      const { apiKey } = req.body;
+      if (apiKey !== serverApiKey) {
+        throw new BadRequestError("Credentials are invalid")
+      }
+    }
+
     const isUserExist = await User.findOne({ username });
     if (isUserExist) {
       throw new BadRequestError("email has already been use");
     }
 
-    const user = User({ username, password });
+    const user = User({ username, password, role });
     await user.save();
 
     // JWT save in to cookie-session
@@ -40,6 +50,7 @@ router.post(
         {
           id: user.id,
           username: user.username,
+          role: user.role
         },
         "key"
       ),

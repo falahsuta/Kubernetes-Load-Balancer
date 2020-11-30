@@ -9,6 +9,7 @@ const CurrentUserRouter = require("./routes/current-user");
 const SignupRouter = require("./routes/signup");
 const SignInRouter = require("./routes/signin");
 const SignOutRouter = require("./routes/signout");
+const RestRouter = require("./routes/rest");
 const ErrorHandler = require("../../common/middlewares/error-handler");
 
 connect();
@@ -24,10 +25,11 @@ app.use(
 
 // Current User Router and Wiring up Cookie Session
 app.use(CurrentUserRouter);
+app.use(RestRouter);
 app.use(SignupRouter);
 app.use(SignOutRouter);
 app.use(SignInRouter);
-app.use(ErrorHandler);
+// app.use(ErrorHandler);
 
 app.listen(4001, () => {
   console.log("auth-service listen on port 4001");

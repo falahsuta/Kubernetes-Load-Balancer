@@ -28,6 +28,9 @@ router.post(
 
     const { username, password } = req.body;
     const isUserExist = await User.findOne({ username });
+
+
+
     if (!isUserExist) {
       throw new BadRequestError("Credentials are invalid");
     }
@@ -45,6 +48,7 @@ router.post(
         {
           id: isUserExist.id,
           username: isUserExist.username,
+          role: isUserExist.role
         },
         "key"
       ),

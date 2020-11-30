@@ -4,6 +4,13 @@ const Password = require("../services/password");
 const userSchema = new mongoose.Schema({
   username: String,
   password: String,
+  role: Number
+}, {
+  toJSON: {
+    transform(doc, ret) {
+      delete ret.password;
+    }
+  }
 });
 
 userSchema.pre("save", async function (next) {
