@@ -76,6 +76,10 @@ router.put("/api/users/:id", currUserMiddleware, async (req, res) => {
       }
     }
 
+    if (req.body.role && req.body.role == 1) {
+      throw new NotAuthorizedError();
+    }
+
     user.set({
       ...req.body
     })
