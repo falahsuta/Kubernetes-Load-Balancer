@@ -9,6 +9,7 @@ const CurrentUserRouter = require("./routes/current-user");
 const SignupRouter = require("./routes/signup");
 const SignInRouter = require("./routes/signin");
 const SignOutRouter = require("./routes/signout");
+const DocsRouter = require("./routes/docs");
 const ErrorHandler = require("./helpers/middlewares/error-handler");
 
 connect();
@@ -27,7 +28,8 @@ app.use(CurrentUserRouter);
 app.use(SignupRouter);
 app.use(SignOutRouter);
 app.use(SignInRouter);
-app.use(ErrorHandler);
+app.use(DocsRouter);
+// app.use(ErrorHandler);
 
 app.listen(3000, () => {
   console.log("auth-service listen on port 3000");
