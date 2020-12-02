@@ -1,7 +1,7 @@
 {
-  "name": "unamed",
-  "version": "1.0.0",
-  "description": "",
+  "name": "authservices",
+  "version": "0.0.0",
+  "description": "CRUD users authentication API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/falahsuta/Projects-1-Unamed.git"
+    "url": "git+https://github.com/falahsuta/Kubernetes-Load-Balancer.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/falahsuta/Projects-1-Unamed/issues"
+    "url": "https://github.com/falahsuta/Kubernetes-Load-Balancer/issues"
   },
-  "homepage": "https://github.com/falahsuta/Projects-1-Unamed#readme",
+  "homepage": "https://github.com/falahsuta/Kubernetes-Load-Balancer#readme",
   "dependencies": {
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",

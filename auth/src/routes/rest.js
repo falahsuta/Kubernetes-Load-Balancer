@@ -4,7 +4,7 @@ const User = require("../models/User");
 const currUserMiddleware = require("../middlewares/current-user");
 const { body, validationResult } = require("express-validator");
 
-const common_path = "../../../common";
+const common_path = "../helpers";
 const { NotAuthorizedError } = require(common_path +
   "/errors/not-authorized-error");
 const { ValidationError } = require(common_path +

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const MONGO_URI =
-  "mongodb+srv://falah:falah@cluster0-vcpnk.mongodb.net/auth?retryWrites=true&w=majority";
+// const MONGO_URI =
+//   "mongodb+srv://falah:falah@cluster0-vcpnk.mongodb.net/auth?retryWrites=true&w=majority";
+const MONGO_URI = "mongodb://auth-mongo-srv:27017/auth";
 
 const connect = async () => {
   try {

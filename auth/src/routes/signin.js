@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
 
-const common_path = "../../../common";
+const common_path = "../helpers";
 const { ValidationError } = require(common_path +
   "/errors/request-validation-error");
 const { BadRequestError } = require(common_path + "/errors/bad-request-error");

@@ -10,7 +10,7 @@ const SignupRouter = require("./routes/signup");
 const SignInRouter = require("./routes/signin");
 const SignOutRouter = require("./routes/signout");
 const RestRouter = require("./routes/rest");
-const ErrorHandler = require("../../common/middlewares/error-handler");
+const ErrorHandler = require("./helpers/middlewares/error-handler");
 
 connect();
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
@@ -29,8 +29,8 @@ app.use(RestRouter);
 app.use(SignupRouter);
 app.use(SignOutRouter);
 app.use(SignInRouter);
-// app.use(ErrorHandler);
+app.use(ErrorHandler);
 
-app.listen(4001, () => {
-  console.log("auth-service listen on port 4001");
+app.listen(3000, () => {
+  console.log("auth-service listen on port 3000");
 });
