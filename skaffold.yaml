@@ -16,4 +16,12 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: .
+    - image: falahsutawindaya/user
+      context: user
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .
     

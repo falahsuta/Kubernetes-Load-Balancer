@@ -11,7 +11,7 @@ const { BadRequestError } = require(common_path + "/errors/bad-request-error");
 const User = require("../models/User");
 
 router.post(
-  "/api/users/signup",
+  "/api/auth/signup",
   [
     body("username").isEmail().withMessage("Email must be valid"),
     body("password")

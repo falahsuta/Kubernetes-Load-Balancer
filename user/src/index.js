@@ -5,10 +5,7 @@ const cookieSession = require("cookie-session");
 const cors = require("cors");
 
 const connect = require("./connections/mongo");
-const CurrentUserRouter = require("./routes/current-user");
-const SignupRouter = require("./routes/signup");
-const SignInRouter = require("./routes/signin");
-const SignOutRouter = require("./routes/signout");
+const UserRouter = require("./routes/user");
 const ErrorHandler = require("./helpers/middlewares/error-handler");
 
 connect();
@@ -23,12 +20,9 @@ app.use(
 );
 
 // Current User Router and Wiring up Cookie Session
-app.use(CurrentUserRouter);
-app.use(SignupRouter);
-app.use(SignOutRouter);
-app.use(SignInRouter);
+app.use(UserRouter);
 app.use(ErrorHandler);
 
 app.listen(3000, () => {
-  console.log("auth-service listen on port 3000");
+  console.log("user-service listen on port 3000");
 });

@@ -1,7 +1,7 @@
 {
-  "name": "authservices",
+  "name": "user",
   "version": "0.0.0",
-  "description": "Auth users API",
+  "description": "CRUD users authentication API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

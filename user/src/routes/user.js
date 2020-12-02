@@ -1,7 +1,8 @@
 const express = require("express");
+require("express-async-errors");
 const router = express.Router();
 const User = require("../models/User");
-const currUserMiddleware = require("../middlewares/current-user");
+const currUserMiddleware = require("../helpers/middlewares/current-user");
 const { body, validationResult } = require("express-validator");
 
 const common_path = "../helpers";
@@ -77,7 +78,7 @@ router.put("/api/users/:id", currUserMiddleware, async (req, res) => {
     }
 
     if (req.body.role && req.body.role == 1) {
-      throw new NotAuthorizedError();
+      throw new BadRequestError();
     }
 
     user.set({

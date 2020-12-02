@@ -12,7 +12,7 @@ const Password = require("../services/password");
 const User = require("../models/User");
 
 router.post(
-  "/api/users/signin",
+  "/api/auth/signin",
   [
     body("username").isEmail().withMessage("Email must be valid"),
     body("password")
