@@ -1,4 +1,4 @@
-# Kubernetes load balancer
+# Kubernetes Load Balancer
 
 <p align="center">
     <img src="images/image2.png">
@@ -21,8 +21,8 @@ Kredensial role admin:
  - password: password 
 <br />
 Lakukan POST request ke 34.101.155.211/api/auth/signin (memasukan session user)
-Melakukan akses crud users: Lakukan GET request ke 34.101.155.211/api/users
 <br />
+Melakukan akses crud users: Lakukan GET request ke 34.101.155.211/api/users
 <br />
 <p align="center">
     <img src="images/image1.png">
