@@ -29,7 +29,7 @@ app.use(SignupRouter);
 app.use(SignOutRouter);
 app.use(SignInRouter);
 app.use(DocsRouter);
-// app.use(ErrorHandler);
+app.use(ErrorHandler);
 
 app.listen(3000, () => {
   console.log("auth-service listen on port 3000");

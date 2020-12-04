@@ -6,6 +6,7 @@ const cors = require("cors");
 
 const connect = require("./connections/mongo");
 const UserRouter = require("./routes/user");
+const DocsRouter = require("./routes/docs");
 const ErrorHandler = require("./helpers/middlewares/error-handler");
 
 connect();
@@ -21,6 +22,7 @@ app.use(
 
 // Current User Router and Wiring up Cookie Session
 app.use(UserRouter);
+app.use(DocsRouter);
 app.use(ErrorHandler);
 
 app.listen(3000, () => {
