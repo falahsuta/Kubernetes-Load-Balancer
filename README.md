@@ -10,8 +10,8 @@
 - Load balancer: ingress nginx <br />
 - Region server/vps: Asia-southeast2 <br />
 - dokumentasi pod: 
- - <b>34.101.155.211/api/auth/docs</b>
- - <b>34.101.155.211/api/users/docs</b> (perhatikan beberapa suffixes pada akhir endpoint yang harus didelete)
+     - <b>34.101.155.211/api/auth/docs</b>
+     - <b>34.101.155.211/api/users/docs</b> (perhatikan beberapa suffixes pada akhir endpoint yang harus didelete)
 - lokasi script (.yaml): /infra/k8s
 
 
