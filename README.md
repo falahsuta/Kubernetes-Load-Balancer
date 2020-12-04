@@ -14,6 +14,7 @@
      - <b>34.101.155.211/api/users/docs</b> (perhatikan beberapa suffixes pada akhir endpoint yang harus didelete)
 - lokasi script (.yaml): /infra/k8s
 
+Koreksi sedikit: di docs signup (role user) masukan field role: 0 (lupa menambahkan)
 
 ### Contoh penggunaan sederhana
 Kredensial role admin: 
