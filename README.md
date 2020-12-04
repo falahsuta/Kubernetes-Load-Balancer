@@ -18,7 +18,7 @@
 ### Contoh penggunaan sederhana
 Kredensial role admin: 
  - username: test@test.com
- - password: password
+ - password: password <br />
 Lakukan POST request ke 34.101.155.211/api/auth/signin (memasukan session user)
 Melakukan akses crud users: Lakukan GET request ke 34.101.155.211/api/users
 <br />
