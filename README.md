@@ -28,5 +28,5 @@ Melakukan akses crud users: Lakukan GET request ke 34.101.155.211/api/users
 <br />
 <br />
 <p align="center">
-    <img src="images/image1.png">
+<!--     <img src="images/image1.png"> -->
 </p>
